@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Cálculo de resisencias en paralelo</title>
+</head>
+<body>
+    <div class="principal">
+        <header>
+            <h1>Cálculo de resistencias en paralelo</h1>
+        </header>
+        <section class="contenido">
+            <p>Para hacer el cálculo de resistencias en paralelo se utiliza la siguiente fórmula: 
+                <br />
+                <img src="/imagenes/formulaResistenciaParalelo.png"/>
+            </p>
+            <form action="" id="valores-form">
+                <p>Ingresa los valores de las resistencias (solo se aceptan valores numéricos)</p>
+                <input type="text" placeholder="Ingresa los valores" id="resis-valor">
+                <input type="submit" value="Agregar" class="button agregar">
+            </form>
+            <div id="contenedor">
+                <ul id="value-list"></ul>
+                <button onclick="calcular()" class="button calcular"><i class="material-icons">done</i></button>
+                <button onclick="limpiarUltimo()" class="button limpiar-ultimo"><i class="material-icons">arrow_back</i></button>
+                <button onclick="limpiarTodo()" class="button limpiar-todo"><i class="material-icons">delete</i></button>
+            </div>
+            <div id="contenedor-resul">
+                <p class="titulo-resul">Resultado:</p>
+                <p id="result"></p>
+            </div>
+        </section>
+    </div>
+    <script src="main.js"></script>    
+</body>
+</html>
